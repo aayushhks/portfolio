@@ -3,12 +3,12 @@ import React from 'react';
 // You can replace these with your actual details
 const portfolioDetails = {
     name: "Aayush Kumar",
-    title: "Software Engineer | AI Researher",
+    title: "Software and AI/ML Engineer",
     callToAction: "Explore My Universe",
     socials: {
-        github: "https://github.com/aayushhks",
-        linkedin: "https://linkedin.com/in/aayushhks",
-        // twitter: "https://twitter.com",
+        github: "https://github.com",
+        linkedin: "https://linkedin.com",
+        twitter: "https://twitter.com",
     }
 };
 
@@ -92,12 +92,22 @@ export default function App() {
                         </p>
                     </header>
 
-                    <a
-                        href="#projects"
-                        className="px-8 py-3 mt-6 font-semibold text-white transition-all duration-500 border-2 border-white rounded-full hover:bg-white hover:text-slate-900 hover:shadow-2xl hover:shadow-cyan-400/50 transform hover:scale-105"
-                    >
-                        {portfolioDetails.callToAction}
-                    </a>
+                    <div className="flex flex-col sm:flex-row items-center gap-4 mt-6">
+                        <a
+                            href="#projects"
+                            className="px-8 py-3 font-semibold text-white transition-all duration-500 border-2 border-white rounded-full hover:bg-white hover:text-slate-900 hover:shadow-2xl hover:shadow-cyan-400/50 transform hover:scale-105"
+                        >
+                            {portfolioDetails.callToAction}
+                        </a>
+                        <a
+                            href="/Aayush_Kumar.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="px-8 py-3 font-semibold text-cyan-200 transition-all duration-500 border-2 border-cyan-200 rounded-full hover:bg-cyan-200 hover:text-slate-900 hover:shadow-2xl hover:shadow-cyan-400/50 transform hover:scale-105"
+                        >
+                            View Resume
+                        </a>
+                    </div>
 
                     {/* Social Media Links */}
                     <div className="flex items-center gap-6 mt-12">
@@ -121,3 +131,4 @@ export default function App() {
         </>
     );
 }
+
