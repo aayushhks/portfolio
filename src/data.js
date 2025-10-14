@@ -1,0 +1,127 @@
+export const portfolioDetails = {
+    name: "Aayush Kumar",
+    intro: [
+        "I build intelligent web experiences.",
+        "I transform complex problems into elegant solutions.",
+        "I merge design with cutting-edge technology.",
+    ],
+    callToActionAbout: "Learn More About Me", // New button text
+    socials: {
+        github: "https://github.com/aayushks",
+        linkedin: "https://linkedin.com/in/aayush-kumar-96096a208/",
+    },
+    email: "aayushhks03@gmail.com",
+};
+
+export const projects = [
+    {
+        title: "AI Chatbot Interface",
+        description: "A sleek, responsive interface for a generative AI, built with React and the Vercel AI SDK.",
+        tech: ["React", "Vercel AI SDK", "Tailwind"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+    {
+        title: "Reinforcement Learning Visualizer",
+        description: "An interactive web tool to visualize graph coloring algorithms solved by a Double DQN agent.",
+        tech: ["PyTorch", "D3.js", "Flask"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+    {
+        title: "ASR Transcription Service",
+        description: "A high-accuracy Automatic Speech Recognition API designed for multi-speaker diarization.",
+        tech: ["Python", "WhisperX", "NVIDIA NeMo"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+    {
+        title: "NFT Mobile Marketplace",
+        description: "A full-stack mobile application for trading NFTs with a novel and secure transaction solution.",
+        tech: ["React Native", "MongoDB", "Express"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+    {
+        title: "Language Cognition Tool",
+        description: "A psycholinguistic research platform featuring a custom NLP pipeline for automated data analysis.",
+        tech: ["Next.js", "PostgreSQL", "NLTK"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+    {
+        title: "Distributed Consensus Algorithm",
+        description: "A fault-tolerant implementation of the OmniPaxos consensus algorithm, validated with simulated network failures.",
+        tech: ["Go", "Distributed Systems"],
+        liveUrl: "#",
+        sourceUrl: "#",
+    },
+];
+
+export const resumeData = {
+    contact: {
+        phone: "+1 857 540 0390",
+        email: "aayushhks03@gmail.com",
+    },
+    education: [
+        {
+            university: "Boston University",
+            degree: "Master of Science, Computer Science",
+            duration: "Expected Dec 2026",
+            details: "Coursework: Advanced Algorithms, Distributed Systems, Deep Learning, Object Oriented Design."
+        },
+        {
+            university: "Manipal University Jaipur",
+            degree: "Bachelor of Technology, Computer Science",
+            duration: "July 2025",
+            details: "GPA: 3.59. Coursework: Data Structures, AI, Machine Learning, Software Engineering."
+        }
+    ],
+    skills: {
+        "Programming Languages": "Python, Go, C, C++, TypeScript/JavaScript, Java, SQL",
+        "Libraries / Frameworks": "Next.js, React/React Native, Node.js, Flask, PyTorch, Vercel AI SDK, Tailwind CSS",
+        "Tools / Platforms": "Git, Docker, Linux, Postman, Tableau, Vercel, Vite.js",
+        "Databases": "PostgreSQL, MongoDB"
+    },
+    experience: [
+        {
+            company: "BlackRock",
+            role: "Software Engineer, Backend, Analyst",
+            duration: "Jan 2025 - Aug 2025",
+            points: [
+                "Automated end-to-end data onboarding for equity and fixed income products using Python, saving 15-20 manual hours weekly.",
+                "Deployed Python-based AI agents to automate internal workflows and data analysis tasks."
+            ]
+        },
+        {
+            company: "Indian Institute of Technology, New Delhi",
+            role: "Research Intern",
+            duration: "Aug 2024 - Jan 2025",
+            points: [
+                "Engineered a multi-stage AI pipeline for a full-stack Automatic Speech Recognition (ASR) service."
+            ]
+        },
+        {
+            company: "Indian Institute of Technology, Kanpur",
+            role: "Research Intern",
+            duration: "May 2024 - Jan 2025",
+            points: [
+                "Developed a full-stack psycholinguistic research tool with an integrated NLP pipeline for the 'SHABD 3' research paper."
+            ]
+        }
+    ],
+    projects: [
+        {
+            title: "Graph Coloring using Reinforcement Learning",
+            description: "Developed a Double DQN system in PyTorch to solve the NP-hard graph coloring problem, achieving near real-time performance."
+        },
+        {
+            title: "Omnix; Chatbot",
+            description: "Engineered a generative AI chatbot using Vercel's AI SDK supporting Google Gemini, OpenAI, and Anthropic with NextAuth.js security."
+        },
+        {
+            title: "Anushandhan Research Project, IIT Delhi",
+            description: "Developed a transcription API using WhisperX and NVIDIA NeMo, enhancing accuracy with Demucs vocal isolation."
+        }
+    ]
+};
