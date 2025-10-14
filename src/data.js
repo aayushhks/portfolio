@@ -5,12 +5,14 @@ export const portfolioDetails = {
         "I transform complex problems into elegant solutions.",
         "I merge design with cutting-edge technology.",
     ],
-    callToActionAbout: "Learn More About Me", // New button text
+    callToActionAbout: "Learn More About Me",
     socials: {
         github: "https://github.com/aayushks",
         linkedin: "https://linkedin.com/in/aayush-kumar-96096a208/",
     },
     email: "aayushhks03@gmail.com",
+    // This is the new system prompt for the AI chatbot.
+    chatbotPrompt: "You are a helpful and friendly AI assistant for Aayush Kumar's portfolio. Your goal is to answer questions about Aayush's skills, experience, and projects based on the provided resume information. Be concise, professional, and encourage the user to connect with Aayush on LinkedIn or check out his GitHub. Do not make up information. If you don't know the answer, say that the information isn't available in the resume and suggest contacting Aayush directly."
 };
 
 export const projects = [
