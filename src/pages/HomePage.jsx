@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { portfolioDetails } from '/src/data.js';
+import { portfolioDetails } from '../data.js';
+import { GithubIcon, LinkedinIcon } from '../components/Icons.jsx';
 
 // A custom hook for the typewriter effect
 const useTypewriter = (sentences) => {
@@ -46,7 +47,7 @@ const HomePage = ({ onNavigate }) => {
             </header>
 
             <p className="max-w-xl text-slate-400 text-base sm:text-lg">
-                I'm a computer science student with a passion for building intelligent and performant web solutions. I transform complex problems into elegant, user-centric applications.
+                Software engineer by day, AI trainer by night. I build smart, full-stack AI powered applications and ML models that solve problems, produce results and occasionally question the nature of their own existence. My code is clean, my models are learning, and my coffee is strong.
             </p>
 
             <div className="flex items-center gap-6 mt-10">
@@ -57,8 +58,31 @@ const HomePage = ({ onNavigate }) => {
                     {portfolioDetails.callToActionAbout}
                 </button>
             </div>
+
+            {/* Social Links Section */}
+            <div className="flex items-center gap-6 mt-12">
+                <a
+                    href={portfolioDetails.socials.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="GitHub Profile"
+                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                    <GithubIcon className="w-6 h-6" />
+                </a>
+                <a
+                    href={portfolioDetails.socials.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="LinkedIn Profile"
+                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300"
+                >
+                    <LinkedinIcon className="w-6 h-6" />
+                </a>
+            </div>
         </div>
     );
 };
 
 export default HomePage;
+

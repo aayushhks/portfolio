@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 
-// New, more modern icons for the AI theme
+// Icon components for the chatbot UI
 const SparklesIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...props}>
         <path d="M12 3L9.27 9.27L3 12l6.27 2.73L12 21l2.73-6.27L21 12l-6.27-2.73L12 3z" />
@@ -33,22 +33,23 @@ const Chatbot = ({ useChatHook }) => {
         <>
             <style>{`
                 @keyframes soft-glow-pulse {
-                    0%, 100% {
-                        box-shadow: 0 0 10px 0px rgba(22, 163, 175, 0.3), 0 0 20px 0px rgba(22, 163, 175, 0.2);
-                    }
-                    50% {
-                        box-shadow: 0 0 20px 5px rgba(22, 163, 175, 0), 0 0 40px 10px rgba(22, 163, 175, 0);
-                    }
+                    0%, 100% { box-shadow: 0 0 10px 0px rgba(22, 163, 175, 0.3); }
+                    50% { box-shadow: 0 0 20px 5px rgba(22, 163, 175, 0); }
                 }
-                .animate-soft-glow-pulse {
-                    animation: soft-glow-pulse 2.5s infinite ease-in-out;
-                }
+                .animate-soft-glow-pulse { animation: soft-glow-pulse 2.5s infinite ease-in-out; }
             `}</style>
-            <div className="fixed bottom-8 right-8 z-50">
+
+            {/* Main container is fixed to the bottom right and acts as the anchor */}
+            <div className="fixed bottom-4 right-4 sm:bottom-8 sm:right-8 z-50 flex flex-col items-end">
                 {/* Chat Window */}
-                <div className={`w-96 h-[32rem] flex flex-col bg-slate-800/80 backdrop-blur-md border border-slate-700 rounded-xl shadow-2xl transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}`}>
-                    {/* Header */}
-                    <div className="flex justify-between items-center p-4 border-b border-slate-700">
+                <div className={`
+                    bg-slate-800/90 backdrop-blur-md border border-slate-700 rounded-xl shadow-2xl 
+                    transition-all duration-300 ease-in-out
+                    flex flex-col
+                    w-[calc(100vw-2rem)] max-w-sm h-[70vh] max-h-[32rem] sm:w-96 sm:h-[32rem]
+                    ${isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
+                `}>
+                    <div className="flex justify-between items-center p-4 border-b border-slate-700 flex-shrink-0">
                         <h3 className="font-mono text-md text-white flex items-center gap-2">
                             <SparklesIcon className="w-5 h-5 text-cyan-300" />
                             AI Assistant
@@ -58,7 +59,6 @@ const Chatbot = ({ useChatHook }) => {
                         </button>
                     </div>
 
-                    {/* Messages */}
                     <div className="flex-1 p-4 overflow-y-auto space-y-4">
                         {messages.map((m, i) => (
                             <div key={i} className={`flex items-start gap-3 ${m.role === 'user' ? 'justify-end' : 'justify-start'}`}>
@@ -83,13 +83,9 @@ const Chatbot = ({ useChatHook }) => {
                         <div ref={messagesEndRef} />
                     </div>
 
-                    {/* Input Form */}
-                    <form onSubmit={handleSubmit} className="p-3 border-t border-slate-700 flex items-center gap-2">
+                    <form onSubmit={handleSubmit} className="p-3 border-t border-slate-700 flex items-center gap-2 flex-shrink-0">
                         <input
-                            type="text"
-                            value={input}
-                            onChange={handleInputChange}
-                            placeholder="Ask me anything..."
+                            type="text" value={input} onChange={handleInputChange} placeholder="Ask me anything..."
                             className="flex-1 bg-slate-700 text-white placeholder-slate-400 text-sm px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500"
                         />
                         <button type="submit" className="bg-slate-700 text-white p-2 rounded-lg hover:bg-slate-600 disabled:text-slate-500" disabled={isLoading || !input}>
@@ -101,7 +97,7 @@ const Chatbot = ({ useChatHook }) => {
                 {/* Chat Toggle Button */}
                 <button
                     onClick={() => setIsOpen(!isOpen)}
-                    className={`mt-4 float-right p-3 rounded-full shadow-lg transition-all duration-300 ${isOpen ? 'opacity-0 scale-75' : 'opacity-100 scale-100'} bg-slate-800 border border-slate-700 text-cyan-300 hover:border-cyan-300 animate-soft-glow-pulse`}
+                    className={`mt-4 p-3 rounded-full shadow-lg transition-all duration-300 ${isOpen ? 'opacity-0 scale-75' : 'opacity-100 scale-100'} bg-slate-800 border border-slate-700 text-cyan-300 hover:border-cyan-300 animate-soft-glow-pulse`}
                     aria-label="Toggle Chat"
                 >
                     <SparklesIcon />
@@ -112,3 +108,4 @@ const Chatbot = ({ useChatHook }) => {
 };
 
 export default Chatbot;
+

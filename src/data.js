@@ -1,14 +1,14 @@
 export const portfolioDetails = {
     name: "Aayush Kumar",
     intro: [
-        "I build intelligent web experiences.",
-        "I transform complex problems into elegant solutions.",
-        "I merge design with cutting-edge technology.",
+        "I build intelligent, full-stack applications.",
+        "I specialize in AI, machine learning, and backend systems.",
+        "I transform complex data into intuitive user experiences.",
     ],
     callToActionAbout: "Learn More About Me",
     socials: {
-        github: "https://github.com/aayushks",
-        linkedin: "https://linkedin.com/in/aayush-kumar-96096a208/",
+        github: "https://github.com/aayushhks",
+        linkedin: "https://linkedin.com/in/aayushhks",
     },
     email: "aayushhks03@gmail.com",
     // This is the new system prompt for the AI chatbot.
@@ -17,46 +17,53 @@ export const portfolioDetails = {
 
 export const projects = [
     {
-        title: "AI Chatbot Interface",
+        title: "Omnix: ChatBot",
         description: "A sleek, responsive interface for a generative AI, built with React and the Vercel AI SDK.",
         tech: ["React", "Vercel AI SDK", "Tailwind"],
-        liveUrl: "#",
-        sourceUrl: "#",
+        liveUrl: "https://demo.chat-sdk.dev/",
+        sourceUrl: "https://github.com/aayushhks/omnix-chatbot",
     },
     {
-        title: "Reinforcement Learning Visualizer",
-        description: "An interactive web tool to visualize graph coloring algorithms solved by a Double DQN agent.",
+        title: "Graph Coloring with RL",
+        description: "An interactive web tool to visualize graph coloring algorithms solved by a Double DQN.",
         tech: ["PyTorch", "D3.js", "Flask"],
         liveUrl: "#",
-        sourceUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/graph-coloring-using-reinforcement-learning",
     },
     {
-        title: "ASR Transcription Service",
+        title: "IIT Delhi Anushandhan ASR",
         description: "A high-accuracy Automatic Speech Recognition API designed for multi-speaker diarization.",
         tech: ["Python", "WhisperX", "NVIDIA NeMo"],
         liveUrl: "#",
-        sourceUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/iitd-anushandhan",
     },
     {
-        title: "NFT Mobile Marketplace",
+        title: "NFT Marketplace, De-Fi Hackathon",
         description: "A full-stack mobile application for trading NFTs with a novel and secure transaction solution.",
         tech: ["React Native", "MongoDB", "Express"],
         liveUrl: "#",
-        sourceUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/de-fi-hacks",
     },
     {
-        title: "Language Cognition Tool",
+        title: "Language Cognition Tool, IIT kanpur",
         description: "A psycholinguistic research platform featuring a custom NLP pipeline for automated data analysis.",
         tech: ["Next.js", "PostgreSQL", "NLTK"],
         liveUrl: "#",
-        sourceUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/iitk-lang-cognition-lab",
     },
     {
-        title: "Distributed Consensus Algorithm",
+        title: "OmniPaxos: Consensus Algorithm",
         description: "A fault-tolerant implementation of the OmniPaxos consensus algorithm, validated with simulated network failures.",
         tech: ["Go", "Distributed Systems"],
         liveUrl: "#",
-        sourceUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/omnipaxos",
+    },
+    {
+        title: "MapReduce",
+        description: "A fault-tolerant implementation of the OmniPaxos consensus algorithm, validated with simulated network failures.",
+        tech: ["Go", "Distributed Systems"],
+        liveUrl: "#",
+        sourceUrl: "https://github.com/aayushhks/map-reduce",
     },
 ];
 

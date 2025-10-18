@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { portfolioDetails, resumeData } from '../data.js';
+import { portfolioDetails, resumeData } from '/src/data.js';
 
 // This custom hook encapsulates all the logic for the chatbot.
 export const useChat = () => {
@@ -28,7 +28,8 @@ export const useChat = () => {
         setIsLoading(true);
 
         const apiKey = ""; // API key is handled by the environment, leave as empty string.
-        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-05-20:generateContent?key=${apiKey}`;
+        // PERMANENT FIX: Updated to the latest stable Gemini model endpoint for maximum reliability.
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
 
         // Construct the payload with history and system instructions
         const payload = {
@@ -55,7 +56,9 @@ export const useChat = () => {
             });
 
             if (!response.ok) {
-                throw new Error(`API error: ${response.statusText}`);
+                const errorBody = await response.text();
+                console.error("API Error Response:", errorBody);
+                throw new Error(`API error: ${response.status} ${response.statusText}`);
             }
 
             const result = await response.json();
@@ -81,3 +84,4 @@ export const useChat = () => {
         isLoading
     };
 };
+
