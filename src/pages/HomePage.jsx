@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { portfolioDetails } from '../data.js';
+import { portfolioDetails } from '/src/data.js';
 
 // A custom hook for the typewriter effect
 const useTypewriter = (sentences) => {
@@ -35,21 +35,21 @@ const HomePage = ({ onNavigate }) => {
 
     return (
         <div className="relative z-10 flex flex-col items-start justify-center w-full text-left">
-            <header className="mb-8">
-                <p className="text-lg text-cyan-300 mb-4 font-mono">Hi, my name is</p>
-                <h1 className="text-6xl md:text-8xl font-bold tracking-tighter text-slate-200">
+            <header className="mb-6">
+                <p className="text-md sm:text-lg text-cyan-300 mb-4 font-mono">Hi, my name is</p>
+                <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-slate-200">
                     {portfolioDetails.name}.
                 </h1>
-                <h2 className="text-4xl md:text-6xl font-semibold tracking-tight text-slate-400 mt-2 h-20 md:h-24">
+                <h2 className="text-2xl sm:text-4xl md:text-6xl font-semibold tracking-tight text-slate-400 mt-2 h-16 sm:h-20 md:h-24">
                     {typedText}<span className="animate-pulse text-slate-500">|</span>
                 </h2>
             </header>
 
-            <p className="max-w-xl text-slate-400 mt-6 text-lg">
+            <p className="max-w-xl text-slate-400 text-base sm:text-lg">
                 I'm a computer science student with a passion for building intelligent and performant web solutions. I transform complex problems into elegant, user-centric applications.
             </p>
 
-            <div className="flex items-center gap-6 mt-12">
+            <div className="flex items-center gap-6 mt-10">
                 <button
                     onClick={() => onNavigate('about')}
                     className="px-6 py-2 font-medium tracking-wider text-cyan-300 transition-colors duration-300 border border-cyan-300 rounded hover:bg-cyan-300/10"
