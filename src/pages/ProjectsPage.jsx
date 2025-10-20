@@ -1,3 +1,4 @@
+// src/pages/ProjectsPage.jsx
 import React from 'react';
 import { projects } from '/src/data.js';
 import { GithubIcon, ExternalLinkIcon } from '/src/components/Icons.jsx';
@@ -13,8 +14,8 @@ const FolderIcon = () => (
 
 const ProjectsPage = () => (
     <AnimatedSection>
-        {/* The max-width is increased here for a wider layout */}
-        <div className="relative z-10 flex flex-col items-start max-w-7xl w-full text-left p-4 mx-auto">
+        {/* Raised z-index so social/action icons remain tappable on small devices */}
+        <div className="relative z-30 flex flex-col items-start max-w-7xl w-full text-left p-4 mx-auto">
             <h2 className="text-2xl sm:text-3xl font-bold text-slate-200 mb-4 font-mono tracking-tight">03. Things I've Built</h2>
             <div className="w-full h-px bg-slate-700 mb-8"></div>
 
@@ -26,10 +27,22 @@ const ProjectsPage = () => (
                                 <FolderIcon />
                             </div>
                             <div className="flex items-center gap-4">
-                                <a href={project.sourceUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-300 transition-colors" aria-label="Source Code">
+                                <a
+                                    href={project.sourceUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-slate-400 hover:text-cyan-300 transition-colors pointer-events-auto"
+                                    aria-label="Source Code"
+                                >
                                     <GithubIcon className="w-6 h-6"/>
                                 </a>
-                                <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-cyan-300 transition-colors" aria-label="Live Demo">
+                                <a
+                                    href={project.liveUrl}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-slate-400 hover:text-cyan-300 transition-colors pointer-events-auto"
+                                    aria-label="Live Demo"
+                                >
                                     <ExternalLinkIcon className="w-6 h-6" />
                                 </a>
                             </div>
@@ -49,4 +62,3 @@ const ProjectsPage = () => (
 );
 
 export default ProjectsPage;
-

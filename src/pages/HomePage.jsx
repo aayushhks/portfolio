@@ -35,7 +35,7 @@ const HomePage = ({ onNavigate }) => {
     const typedText = useTypewriter(portfolioDetails.intro);
 
     return (
-        <div className="relative z-10 flex flex-col items-start justify-center w-full text-left">
+        <div className="relative z-30 flex flex-col items-start justify-center w-full text-left">
             <header className="mb-6">
                 <p className="text-md sm:text-lg text-cyan-300 mb-4 font-mono">Hi, my name is</p>
                 <h1 className="text-4xl sm:text-6xl md:text-8xl font-bold tracking-tighter text-slate-200">
@@ -66,7 +66,7 @@ const HomePage = ({ onNavigate }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="GitHub Profile"
-                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300"
+                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300 pointer-events-auto"
                 >
                     <GithubIcon className="w-6 h-6" />
                 </a>
@@ -75,7 +75,7 @@ const HomePage = ({ onNavigate }) => {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="LinkedIn Profile"
-                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300"
+                    className="text-slate-400 hover:text-cyan-300 transition-colors duration-300 pointer-events-auto"
                 >
                     <LinkedinIcon className="w-6 h-6" />
                 </a>
@@ -85,4 +85,3 @@ const HomePage = ({ onNavigate }) => {
 };
 
 export default HomePage;
-

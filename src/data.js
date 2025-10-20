@@ -19,21 +19,21 @@ export const projects = [
     {
         title: "Omnix: ChatBot",
         description: "A sleek, responsive interface for a generative AI, built with React and the Vercel AI SDK.",
-        tech: ["React", "Vercel AI SDK", "Tailwind"],
+        tech: ["TypeScript", "Vercel AI SDK", "Tailwind"],
         liveUrl: "https://demo.chat-sdk.dev/",
         sourceUrl: "https://github.com/aayushhks/omnix-chatbot",
     },
     {
         title: "Graph Coloring with RL",
         description: "An interactive web tool to visualize graph coloring algorithms solved by a Double DQN.",
-        tech: ["PyTorch", "D3.js", "Flask"],
+        tech: ["Python", "C", "C++"],
         liveUrl: "#",
         sourceUrl: "https://github.com/aayushhks/graph-coloring-using-reinforcement-learning",
     },
     {
         title: "IIT Delhi Anushandhan ASR",
         description: "A high-accuracy Automatic Speech Recognition API designed for multi-speaker diarization.",
-        tech: ["Python", "WhisperX", "NVIDIA NeMo"],
+        tech: ["Python","React+Vite", "WhisperX", "NVIDIA NeMo", "NLP Modules"],
         liveUrl: "#",
         sourceUrl: "https://github.com/aayushhks/iitd-anushandhan",
     },
@@ -47,7 +47,7 @@ export const projects = [
     {
         title: "Language Cognition Tool, IIT kanpur",
         description: "A psycholinguistic research platform featuring a custom NLP pipeline for automated data analysis.",
-        tech: ["Next.js", "PostgreSQL", "NLTK"],
+        tech: ["Python","React", "NextJs", "NLP Modules: nltk, etc.", ],
         liveUrl: "#",
         sourceUrl: "https://github.com/aayushhks/iitk-lang-cognition-lab",
     },
@@ -60,7 +60,8 @@ export const projects = [
     },
     {
         title: "MapReduce",
-        description: "A fault-tolerant implementation of the OmniPaxos consensus algorithm, validated with simulated network failures.",
+        description: "Engineered a fault-tolerant, distributed MapReduce framework in Go, featuring a coordinator that manages worker failures\n" +
+            "and task distribution via RPC.",
         tech: ["Go", "Distributed Systems"],
         liveUrl: "#",
         sourceUrl: "https://github.com/aayushhks/map-reduce",
@@ -98,24 +99,33 @@ export const resumeData = {
             role: "Software Engineer, Backend, Analyst",
             duration: "Jan 2025 - Aug 2025",
             points: [
-                "Automated end-to-end data onboarding for equity and fixed income products using Python, saving 15-20 manual hours weekly.",
-                "Deployed Python-based AI agents to automate internal workflows and data analysis tasks."
+                "Automated the end-to-end data onboarding process for equity and fixed income products by developing Python scripts for\n" +
+                "data ingestion and validation from Sybase, saving 15-20 hours of manual processing per week.",
+                "Deployed Python-based AI agents to automate internal workflows and data analysis tasks for the Fixed Income team.",
+                "Enhanced in-house Angular-based applications by refactoring backend processes, integrating automation scripts, and de-\n" +
+                "ploying optimized services on Microsoft Azure to improve scalability and operational efficiency."
             ]
         },
         {
             company: "Indian Institute of Technology, New Delhi",
-            role: "Research Intern",
+            role: "Research Intern in Anushandhan(National Research Foundation)",
             duration: "Aug 2024 - Jan 2025",
             points: [
-                "Engineered a multi-stage AI pipeline for a full-stack Automatic Speech Recognition (ASR) service."
+                "Engineered a multi-stage AI pipeline for a full-stack Automatic Speech Recognition (ASR) service, focusing on high-accuracy\n" +
+                "transcription and speaker diarization.",
+                "Transformed the research workflow by creating an automated service that converted raw audio into analysis-ready transcripts," +
+                "saving researchers hundreds of hours of manual labor and enabling faster data analysis."
             ]
         },
         {
             company: "Indian Institute of Technology, Kanpur",
-            role: "Research Intern",
+            role: "Research Intern in Cognitive Science",
             duration: "May 2024 - Jan 2025",
             points: [
-                "Developed a full-stack psycholinguistic research tool with an integrated NLP pipeline for the 'SHABD 3' research paper."
+                "Developed a full-stack psycholinguistic research tool with an integrated NLP pipeline to automate data analysis, providing\n" +
+                "key data for the SHABD 3 research paper.",
+                "Empowered global collaboration on an NUS funded research project by implementing a reproducible data analysis workflow" +
+                "using custom Python NLP modules."
             ]
         }
     ],

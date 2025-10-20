@@ -1,5 +1,4 @@
 // javascript
-// src/components/MobileMenu.jsx
 import React from 'react';
 import { motion as Motion } from 'framer-motion';
 import { CloseIcon } from './Icons';
@@ -29,28 +28,30 @@ const MobileMenu = ({ isOpen, onNavigate, onClose }) => {
         <>
             <Motion.div
                 initial="closed"
-                animate={isOpen ? "open" : "closed"}
+                animate={isOpen ? 'open' : 'closed'}
                 variants={{
-                    open: { opacity: 1, pointerEvents: 'auto' },
-                    closed: { opacity: 0, pointerEvents: 'none' }
+                    open: { opacity: 1 },
+                    closed: { opacity: 0 }
                 }}
-                transition={{ duration: 0.3 }}
+                transition={{ duration: 0.25 }}
                 onClick={onClose}
-                className="fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] lg:hidden"
-            ></Motion.div>
+                aria-hidden={!isOpen}
+                /* default pointer-events-none, enable when open to avoid intercepting taps */
+                className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-[70] lg:hidden ${isOpen ? 'pointer-events-auto' : 'pointer-events-none'}`}
+            />
 
             <Motion.div
                 initial="closed"
-                animate={isOpen ? "open" : "closed"}
+                animate={isOpen ? 'open' : 'closed'}
                 variants={{
                     open: { x: 0 },
-                    closed: { x: "100%" }
+                    closed: { x: '100%' }
                 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
                 onClick={(e) => e.stopPropagation()}
-                className="fixed top-0 right-0 h-full w-3/4 max-w-xs bg-slate-800 shadow-2xl z-[80] flex flex-col items-center justify-center lg:hidden"
+                aria-hidden={!isOpen}
+                className={`fixed top-0 right-0 h-full w-3/4 max-w-xs bg-slate-800 shadow-2xl z-[80] flex flex-col items-center justify-center lg:hidden`}
             >
-                {/* Close button inside the panel so it remains visible */}
                 <button
                     type="button"
                     onClick={onClose}
