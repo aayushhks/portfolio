@@ -64,3 +64,24 @@ src/
     ├── ExperiencePage.jsx
     ├── ResumePage.jsx
     └── ContactPage.jsx
+
+ ## Setup and Installation
+
+Follow these steps to set up and run the project locally:
+
+### 1. Clone the Repository
+git clone https://github.com/aayushhks/portfolio.git
+cd portfolio
+
+### 2. Install Dependencies
+npm install
+
+### 3. Run the Development Server
+npm run dev
+
+> The app will start on http://localhost:5173 by default.
+
+### 4. Build for Production
+npm run build
+
+This will generate an optimized production build in the dist/ directory.
