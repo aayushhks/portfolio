@@ -1,4 +1,4 @@
-# 🌐 Aayush Kumar - Personal Portfolio
+# Aayush Kumar - Personal Portfolio
 
 This is my personal portfolio website, built to showcase my **projects**, **skills**, and **professional experience**.  
 It’s a modern, single-page application (SPA) developed using **React**, **Vite**, and **Tailwind CSS**.
@@ -7,7 +7,7 @@ A standout feature of this portfolio is an **interactive AI chatbot**, powered b
 
 ---
 
-## ✨ Features
+## Features
 
 - **Modern SPA Design:** Sleek, responsive single-page layout for a smooth user experience.  
 - **AI Chatbot:** Integrated chatbot using the **Google Gemini API** (`useChat.jsx`) to answer visitor questions dynamically.  
@@ -18,7 +18,7 @@ A standout feature of this portfolio is an **interactive AI chatbot**, powered b
 
 ---
 
-## 🧩 Key Sections
+## Key Sections
 
 - **Home:** Dynamic introduction section.  
 - **About:** Overview of my background and technical skills.  
@@ -29,7 +29,7 @@ A standout feature of this portfolio is an **interactive AI chatbot**, powered b
 
 ---
 
-## ⚙️ Tech Stack
+## Tech Stack
 
 | Category | Technologies |
 |-----------|---------------|
